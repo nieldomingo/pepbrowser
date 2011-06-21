@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+  <title>PEP Browser</title>
+  <link rel="stylesheet" href="style/jquery.mobile-1.0a4.1.min.css" type="text/css">
+  <script src="js/myloader.js"></script>
+  <script src="js/jquery.mobile-1.0a4.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $.couch.app(function(app) {
+      $("#maincontent").evently("peplist", app);
+    });
+  </script>
+</head>
+<body>
+  <div data-role="page">
+    <div  data-role="header" data-theme="b">
+      <h1>PEP Browser</h1>
+    </div> 
+	<div  data-role="content">
+	  <div id="maincontent">
+	  </div>
+	</div> 
+	<div  data-role="footer" data-theme="b">
+	  <h1>Footer</h1>
+	</div>
+  </div>
+</body>
+</html>
