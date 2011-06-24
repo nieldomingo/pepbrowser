@@ -6,21 +6,40 @@
   <script src="js/jquery.mobile-1.0a4.1.min.js"></script>
   <script type="text/javascript" charset="utf-8">
     $.couch.app(function(app) {
-      $("#maincontent").evently("peplist", app);
+      $("#maincategorylist").evently("peplist", app);
+      $("#maincategorystatuslist").evently("pepstatuslist", app);
+      $("#mainpepdoclist").evently("pepdoclist", app);
+      $.evently.connect("#maincategorylist","#maincategorystatuslist", ["setcategory"]);
+      $.evently.connect("#maincategorystatuslist","#mainpepdoclist", ["setcategorystatus"]);      
     });
   </script>
 </head>
 <body>
-  <div data-role="page">
+  <div data-role="page" id="categorylist">
     <div  data-role="header" data-theme="b">
       <h1>PEP Browser</h1>
     </div> 
 	<div  data-role="content">
-	  <div id="maincontent">
+	  <div id="maincategorylist">
 	  </div>
 	</div> 
-	<div  data-role="footer" data-theme="b">
-	  <h1>Footer</h1>
+  </div>
+  <div data-role="page" id="categorystatuslist">
+    <div  data-role="header" data-theme="b">
+      <h1>PEP Browser</h1>
+    </div> 
+	<div  data-role="content">
+	  <div id="maincategorystatuslist">
+	  </div>
+	</div>
+  </div>
+  <div data-role="page" id="pepdoclist">
+    <div  data-role="header" data-theme="b">
+      <h1>PEP Browser</h1>
+    </div> 
+	<div  data-role="content">
+	  <div id="mainpepdoclist">
+	  </div>
 	</div>
   </div>
 </body>

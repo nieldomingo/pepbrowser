@@ -1,17 +1,5 @@
 <ul id="peplist" data-role="listview" data-theme="c" data-dividertheme="b">
-  <li>
-    <a href="view.html">Entry</a>
-  </li>
-  <li>
-    <a href="view.html">Entry</a>
-  </li>
-  <li>
-    <a href="view.html">Entry</a>
-  </li>
-  <li>
-    <a href="view.html">Entry</a>
-  </li>
-  <li>
-    <a href="view.html">Entry</a>
-  </li>
+  {{#categories}}
+  <li><a href="#categorystatuslist" title="{{ key }}">{{key}} ({{value}})</a></li>
+  {{/categories}}
 </ul>
