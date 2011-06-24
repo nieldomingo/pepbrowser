@@ -9,8 +9,10 @@
       $("#maincategorylist").evently("peplist", app);
       $("#maincategorystatuslist").evently("pepstatuslist", app);
       $("#mainpepdoclist").evently("pepdoclist", app);
+      $("#mainpepview").evently("pepview", app);
       $.evently.connect("#maincategorylist","#maincategorystatuslist", ["setcategory"]);
-      $.evently.connect("#maincategorystatuslist","#mainpepdoclist", ["setcategorystatus"]);      
+      $.evently.connect("#maincategorystatuslist","#mainpepdoclist", ["setcategorystatus"]);
+      $.evently.connect("#mainpepdoclist","#mainpepview", ["setpepnum"]);      
     });
   </script>
 </head>
@@ -39,6 +41,15 @@
     </div> 
 	<div  data-role="content">
 	  <div id="mainpepdoclist">
+	  </div>
+	</div>
+  </div>
+  <div data-role="page" id="pepview">
+    <div  data-role="header" data-theme="b">
+      <h1>PEP View</h1>
+    </div> 
+	<div  data-role="content">
+	  <div id="mainpepview">
 	  </div>
 	</div>
   </div>

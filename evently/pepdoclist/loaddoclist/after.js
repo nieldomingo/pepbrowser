@@ -1,0 +1,3 @@
+function () {
+	$('#doclist').listview();
+};
