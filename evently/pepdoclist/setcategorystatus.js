@@ -1,5 +1,5 @@
-function (e, o) {
-  $$(this).category = o[0];
-  $$(this).status = o[1];
+function (e, category, status) {
+  $$(this).category = category;
+  $$(this).status = status;
   $(this).trigger('loaddoclist');
 }

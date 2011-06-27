@@ -1,4 +1,4 @@
 function () {
   var num = $(this).attr('title');
-  $(this).trigger('setpepnum', num);
+  $(this).trigger('setpepnum', [num]);
 }

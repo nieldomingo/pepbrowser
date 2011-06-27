@@ -1,3 +1,3 @@
 function () {
-	$(this).trigger('setcategory', $(this).attr('title'));
+	$(this).trigger('setcategory', [$(this).attr('title')]);
 };

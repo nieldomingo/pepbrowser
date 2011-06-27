@@ -1,3 +1,3 @@
 function () {
-  $(this).trigger('setcategorystatus', [$(this).attr('title').split('|')]);
+  $(this).trigger('setcategorystatus', $(this).attr('title').split('|'));
 }
